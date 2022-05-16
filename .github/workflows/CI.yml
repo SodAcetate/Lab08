@@ -28,8 +28,7 @@ jobs:
 
     - name: Install Docker
       run: |
-        sudo apt install containerd
-        sudo apt install docker.io
+        sudo apt install runc containerd docker.io
 
     - name: Run Docker
       run: sudo docker build -t logger .
