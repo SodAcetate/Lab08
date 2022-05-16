@@ -27,7 +27,7 @@ jobs:
       run: cmake --build _build --target install
 
     - name: Install Docker
-      run: sudo apt install docker
+      run: sudo apt install docker.io -y
 
     - name: Run Docker
-      run: docker build -t logger .
+      run: sudo docker build -t logger .
