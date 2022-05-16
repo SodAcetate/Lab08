@@ -27,7 +27,9 @@ jobs:
       run: cmake --build _build --target install
 
     - name: Install Docker
-      run: sudo apt install docker.io -y
+      run: |
+        sudo apt install apt-transport-https ca-certificates curl software-properties-common
+        sudo apt install docker.io
 
     - name: Run Docker
       run: sudo docker build -t logger .
