@@ -28,7 +28,7 @@ jobs:
 
     - name: Install Docker
       run: |
-        sudo apt install apt-transport-https ca-certificates curl software-properties-common
+        sudo apt install containerd
         sudo apt install docker.io
 
     - name: Run Docker
